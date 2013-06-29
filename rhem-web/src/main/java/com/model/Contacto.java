@@ -5,6 +5,8 @@ public class Contacto {
   	private String email;
   	private String mensaje;
   	private Integer verificacion;
+  	private String titulo;
+  	private String telefono;
   
 	public String getNombre() {
 		return nombre;
@@ -29,6 +31,18 @@ public class Contacto {
 	}
 	public void setVerificacion(Integer verificacion) {
 		this.verificacion = verificacion;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
   
 }

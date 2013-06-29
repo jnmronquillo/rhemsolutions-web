@@ -15,6 +15,8 @@ public class Contactenos extends Layout {
 	private String msg = "";
 	@Post
 	public void enviarCorreo() {
+		if(contacto.getVerificacion() == null)
+			return;
 		if(contacto.getVerificacion()!=5)
 			return;
 		if(!validate()){
@@ -24,8 +26,10 @@ public class Contactenos extends Layout {
 		}
 		String mensaje = "Email: "+contacto.getEmail()+
 						"Nombre: "+contacto.getNombre()+
+						"Telefono: "+contacto.getTelefono()+
+						"Titulo: "+contacto.getTitulo()+
 						"Mensaje: "+contacto.getMensaje();
-		if(Mail.sendMessage(mensaje, Utilities.getTruncated(contacto.getMensaje(), 100), "marcelobailon@rhemsolutions.com", null, null)){
+		if(Mail.sendMessage(mensaje, Utilities.getTruncated(contacto.getMensaje(), 100), "juanrojas@rhemsolutions.com", null, null)){
 			cssClass = "success";
 			msg = "Su mensaje ha sido enviado";
 		}else{
