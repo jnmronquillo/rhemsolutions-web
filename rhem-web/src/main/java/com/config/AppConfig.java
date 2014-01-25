@@ -4,7 +4,8 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.servlet.GuiceServletContextListener;
 import com.google.sitebricks.SitebricksModule;
-import com.web.Layout;
+import com.web.Contact;
+import com.web.Contactenos;
 
 public class AppConfig extends GuiceServletContextListener {
 
@@ -14,7 +15,9 @@ public class AppConfig extends GuiceServletContextListener {
 			@Override
 	        protected void configureSitebricks() {
 	            // scan class Example's package and all descendants
-	            scan(Layout.class.getPackage());
+//	            scan(Contactenos.class.getPackage());
+				at("/contactenos").show(Contactenos.class);
+				at("/en/contact").show(Contact.class);
 	        }
 		});
 	}
