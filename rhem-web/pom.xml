@@ -9,11 +9,18 @@
   <url>http://maven.apache.org</url>
   <dependencies>
   
+    <!-- javax.servlet -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+    </dependency>
+    
     <!-- Sitebricks -->
     <dependency>
       <groupId>com.google.sitebricks</groupId>
       <artifactId>sitebricks</artifactId>
-      <version>0.8.6</version>
+      <version>0.8.9</version>
     </dependency>
     
     <!-- Java Mail API -->
